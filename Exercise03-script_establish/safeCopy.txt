@@ -1,0 +1,28 @@
+#!/bin/bash
+#!/bin/bash
+if [ $# -lt 2 ]; then
+    echo "Error: Missing arguments."
+    echo "Usage: $0 source_file dest_dir [new_name]"
+    exit 1
+fi
+
+SRC=$1
+DEST=$2
+NEW_NAME=${3:-$(basename "$SRC")}
+
+if [ ! -f "$SRC" ] || [ ! -r "$SRC" ]; then
+    echo "Error: Source file invalid or not readable."
+    exit 1
+fi
+
+if [ ! -d "$DEST" ] || [ ! -w "$DEST" ]; then
+    echo "Error: Destination directory invalid or not writable."
+    exit 1
+fi
+
+if [ -e "$DEST/$NEW_NAME" ]; then
+    echo "Error: Destination file already exists."
+    exit 1
+fi
+
+cp "$SRC" "$DEST/$NEW_NAME"

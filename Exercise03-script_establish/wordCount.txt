@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ -n "$1" ]; then
+    FILE=$1
+else
+    read -p "Enter file name: " FILE
+fi
+if [ -z "$FILE" ]; then
+ echo "Error:No argument supplied"
+exit 1
+fi
+if [ ! -f "$FILE" ]; then
+    echo "Error: Not a valid file" 
+    exit 1
+fi
+
+if [ ! -r "$FILE" ]; then
+    echo "Error: No read permission"
+    exit 1
+fi
+wc -w < "$FILE"
+

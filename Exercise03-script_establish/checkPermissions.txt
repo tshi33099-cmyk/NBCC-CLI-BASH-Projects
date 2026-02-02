@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ -n "$1" ]; then
+FILE=$1
+else
+read -p "Enter filename: " FILE
+fi
+if [ ! -e "$FILE" ]; then
+echo "Error: File does not exist"
+exit 1
+fi
+[ -r "$FILE" ] && echo "You can Read" || { echo "Error: No Read"; exit 1; }
+[ -w "$FILE" ] && echo "You can Write" || { echo "Error: No Write"; exit 1; }
+[ -x "$FILE" ] && echo "You can execute" || { echo "Error: No execute"; exit 1; }
+
