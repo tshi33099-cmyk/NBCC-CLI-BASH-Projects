@@ -1,0 +1,19 @@
+Script started on 2026-02-06 23:13:56-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;tiantian@nb-srv-lcl2: ~/Assignment2[01;32mtiantian@nb-srv-lcl2[00m:[01;34m~/Assignment2[00m$ ls -1
+[?2004l[0m[01;32mcopyPrompt.sh[0m
+[01;34mmySource[0m
+textPart1.txt
+[?2004h]0;tiantian@nb-srv-lcl2: ~/Assignment2[01;32mtiantian@nb-srv-lcl2[00m:[01;34m~/Assignment2[00m$ ls _[K-1 mySource
+[?2004lfile2.txt
+[0m[01;34mtestDir[0m
+[?2004h]0;tiantian@nb-srv-lcl2: ~/Assignment2[01;32mtiantian@nb-srv-lcl2[00m:[01;34m~/Assignment2[00m$ [7m./copyPrompt.sh mySource myDest[27m./copyPrompt.sh mySource myDest
+[?2004lDestination Directory does not exist, create it? (y/yes): y
+File: file2.txt
+Copy this file ? (y/yes): y
+Successfully copied file2.txt.
+[?2004h]0;tiantian@nb-srv-lcl2: ~/Assignment2[01;32mtiantian@nb-srv-lcl2[00m:[01;34m~/Assignment2[00m$ ls -1 myDest
+[?2004lfile2.txt
+[?2004h]0;tiantian@nb-srv-lcl2: ~/Assignment2[01;32mtiantian@nb-srv-lcl2[00m:[01;34m~/Assignment2[00m$ exit
+[?2004lexit
+
+Script done on 2026-02-06 23:28:24-04:00 [COMMAND_EXIT_CODE="0"]
